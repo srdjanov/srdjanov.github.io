@@ -1,0 +1,121 @@
+// Transition mixin
+@mixin transition($time: null, $effect: null){
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+//Vertical align mixin
+@mixin vertical-align($position: relative) {
+    position: $position;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+//Horizontal align mixin
+@mixin horizontal-align($position: relative) {
+    position: $position;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+@mixin set-display($display, $width: null, $height: null){
+    display: $display;
+    width: $width;
+    height: $height;
+}
+
+.relative{
+    position: relative;
+}
+
+
+.img-responsive{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.clearfix{
+    &:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.clear{
+    clear: both;
+}
+
+.fleft{
+    float: left;
+}
+
+.fright{
+    float: right;
+}
+
+.margin-top-40{
+    margin-top: 40px;
+}
+
+.margin-bottom-40{
+    margin-bottom: 40px;
+}
+
+.no-padding{
+    padding: 0 !important;
+}
+
+.no-padding-bottom{
+    padding-bottom: 0 !important;
+}
+
+.padding-left-15{
+    padding-left: 15px !important;
+}
+
+.padding-right-15{
+    padding-right: 15px !important;
+}
+
+.margin-left-15{
+    margin-left: 15px;
+}
+
+.margin-right-15{
+    margin-right: 15px;
+}
+
+// sass map containing breakpoints
+$breakpoints: (
+    'xsmall' : 479px,
+    'small'  : 767px,
+    'medium' : 992px,
+    'large'  : 1200px
+);
+
+@mixin respond-to($breakpoint){
+    // retrieves the value from the key
+    $value: map-get($breakpoints, $breakpoint);
+
+    // if the key exists in the map
+    @if $value != null{
+        // prints a media query based on the value
+        @media (max-width: $value){
+            @content;
+        }
+    }
+
+    // if the key doesn't exist in the map
+    @else{
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Please make sure it is defined in `$breakpoints` map.";
+    }
+}

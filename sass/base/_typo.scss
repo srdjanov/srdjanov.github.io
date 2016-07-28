@@ -1,0 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+// set font family non-generic
+%font-family{
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+}
+
+// set font family fn
+@mixin set-font($size: null,
+                $weight: null,
+                $color: null){
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+body{
+    @extend %font-family;
+}
