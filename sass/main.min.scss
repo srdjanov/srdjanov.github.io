@@ -5,4 +5,8 @@
         'base/typo',
         'base/base';
 
-@import 'layout/pages/welcome';
+@import 'elements/header',
+        'elements/aside';
+
+@import 'layout/pages/welcome',
+        'layout/pages/home';

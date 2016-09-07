@@ -1,6 +1,28 @@
 .intro{
     @include set-display(table, 100%, 100%);
-
+    
+    a.button-line{
+        @include horizontal-align(absolute);
+        bottom: -80px;
+        
+        width: 120px;
+        color: $color-active-dark;
+        text-transform: uppercase;
+        font-size: 14px;
+        
+        &:after{
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            
+            height: 2px;
+            width: calc(100% + 10px);
+            left: -5px;
+            right: -5px;
+            background-color: $color-active-dark;
+        }
+    }
+    
     >article{
         display: table-cell;
         vertical-align: middle;
@@ -59,7 +81,7 @@
             }
 
             &:before{
-                background-color: #fff;
+                background-color: #f9f9f9;
                 z-index: -1;
 
             }

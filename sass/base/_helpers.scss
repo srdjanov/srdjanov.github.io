@@ -24,7 +24,7 @@
     transform: translateX(-50%);
 }
 
-@mixin set-display($display, $width: null, $height: null){
+@mixin set-display($display: null, $width: null, $height: null){
     display: $display;
     width: $width;
     height: $height;

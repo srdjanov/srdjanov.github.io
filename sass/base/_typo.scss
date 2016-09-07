@@ -14,6 +14,14 @@
     color: $color;
 }
 
+a{
+    text-decoration: none;
+}
+
 body{
     @extend %font-family;
+    
+    &.font-portfolio{
+        font-family: "Oxygen", Helvetica, Arial, sans-serif;
+    }
 }

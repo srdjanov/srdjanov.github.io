@@ -1,0 +1,11 @@
+aside{
+    @include set-display(null, 18%, 100%);
+    position: fixed;
+    
+    background-color: $color-module;
+    
+    @include respond-to('large'){
+        display: none;
+        width: 280px;
+    }
+}
