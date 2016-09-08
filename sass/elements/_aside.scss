@@ -27,6 +27,8 @@ aside{
             >li{
                 
                 a{
+                    @include transition;
+                    
                     display: block;
                     position: relative;
                     padding: 15px 20px 15px 35px;
@@ -36,6 +38,7 @@ aside{
                     font-size: 16px;
                     
                     &:before{
+                        @include transition;
                         content: '';
                         position: absolute;
                         left: 15px;
@@ -51,6 +54,14 @@ aside{
                     &.active{
                         &:before{
                             
+                        }
+                    }
+                    
+                    &:hover{
+                        background-color: $color-module-hover;
+                        
+                        &:before{
+                            background-color: #fff;
                         }
                     }
                 }

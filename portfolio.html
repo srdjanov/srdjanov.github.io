@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" href="css/main.min.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oxygen:300,400">-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
     <title>Portfolio | Srdjanov</title>
+    <link rel="stylesheet" href="css/main.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
 </head>
 <body class="font-portfolio">
     <header></header>
@@ -22,6 +21,71 @@
         </nav>
     </aside>
     <div class="content">
-        
+        <section id="skills">
+            <article class="clearfix">
+               <div>
+                   <h1>Skills</h1>
+                   
+                   <ul class="tags">
+                       <li>
+                           <span class="active" onclick="toggleSkill('html', this);">HTML</span>
+                       </li>
+                       <li>
+                           <span onclick="toggleSkill('css', this);">CSS</span>
+                       </li>
+                       <li>
+                           <span onclick="toggleSkill('js', this);">JAVASCRIPT</span>
+                       </li>
+                       <li>
+                           <span onclick="toggleSkill('git', this);">GIT</span>
+                       </li>
+                       <li>
+                           <span>PHOTOSHOP</span>
+                       </li>
+                       <li>
+                           <span onclick="toggleSkill('php', this);">PHP</span>
+                       </li>
+                   </ul>
+               </div>
+               <div>
+                   <ul class="skill-list">
+                    <li id="html">
+                        <h2>HTML</h2>
+                        <label>- HTML5</label>
+                        <label>- Twig templating</label>
+                        <label>- Jekyll</label>
+                        <label>- Hexo</label>
+                    </li>
+                    <li class="hide" id="css">
+                        <h2>CSS</h2>
+                        <label>- CSS3</label>
+                        <label>- Sass with Compass / Gulp</label>
+                    </li>
+                    <li class="hide" id="js">
+                        <h2>Javascript</h2>
+                        <label>- Jquery</label>
+                        <label>- Angular 1.x</label>
+                    </li>
+                    <li class="hide" id="git">
+                        <h2>GIT</h2>
+                        <label>- SourceTree</label>
+                    </li>
+                    <li class="hide" id="php">
+                        <h2>PHP (learning)</h2>
+                        <label>- Laravel framework</label>
+                    </li>
+                </ul>
+               </div>
+                <!--<ul>
+                    <li><div class="icon-"></div></li>
+                    <li><div class="icon-"></div></li>
+                    <li><div class="icon-"></div></li>
+                </ul>-->
+            </article>
+            
+        </section>
     </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/app.js"></script>
 </body>

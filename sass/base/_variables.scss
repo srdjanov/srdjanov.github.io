@@ -8,5 +8,11 @@ $color-active-light: #16DB93;
 $color-active-medium: #048BA8;
 $color-active-dark: #A4036F;
 
-$color-module: #00445E;
+$color-module: #373F51;
 $color-module-hover: lighten($color-module, 10%);
+
+$color-module-light: #A9BCD0;
+$color-module-light-hover: darken($color-module-light, 10%);
+
+$color-font-heading: #1B1B1E;
+$color-font-text: lighten($color-font-heading, 10%);
