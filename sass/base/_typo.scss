@@ -22,6 +22,7 @@ body{
     @extend %font-family;
     
     &.font-portfolio{
-        font-family: "Oxygen", Helvetica, Arial, sans-serif;
+        font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+        font-weight: 400;
     }
 }

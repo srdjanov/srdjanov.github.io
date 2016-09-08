@@ -1,5 +1,5 @@
 aside{
-    @include set-display(null, 18%, 100%);
+    @include set-display(null, 16%, 100%);
     position: fixed;
     
     background-color: $color-module;
@@ -7,5 +7,54 @@ aside{
     @include respond-to('large'){
         display: none;
         width: 280px;
+    }
+    
+    nav{
+        margin: 15% 0;
+        
+        .profile-picture{
+            margin: 10% 0 10% 0;
+            
+            img{
+                display: block;
+                max-width: 100%;
+                height: auto;
+                margin: 0 auto;
+            }
+        }
+        
+        >ul{
+            >li{
+                
+                a{
+                    display: block;
+                    position: relative;
+                    padding: 15px 20px 15px 35px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    color: #fff;
+                    font-size: 16px;
+                    
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        left: 15px;
+                        top: calc(50% - 8px);
+                        
+                        width: 10px;
+                        height: 10px;
+                        border: 2px solid #fff;
+                        border-radius: 50%;
+                        
+                    }
+                    
+                    &.active{
+                        &:before{
+                            
+                        }
+                    }
+                }
+            }
+        }
     }
 }
