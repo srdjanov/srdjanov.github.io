@@ -5,6 +5,10 @@
     margin-left: 16%;
     padding: 30px;
     
+    @include respond-to('small'){
+        padding: 10px;
+    }
+    
     
     @include respond-to('large'){
         width: 100%;
@@ -14,10 +18,20 @@
     >section{
         margin: 5% 10%;
         
+        @include respond-to('small'){
+            margin: 5% 10px;
+        }
+        
         >article{
             @include transition;
             
             display: table;
+            
+            @include respond-to('small'){
+                width: 100%;
+                table-layout: fixed;
+            }
+            
             border-left: 4px solid $color-module-light;
             background-color: #fff;
             box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
@@ -28,10 +42,6 @@
                 display: table-cell;
                 vertical-align: top;
                 overflow: hidden;
-                
-                &:first-of-type{
-                    border-right: 4px solid #f8f8f8;
-                }
                 
                 &:last-of-type{
                     background-color: $color-module-hover;
