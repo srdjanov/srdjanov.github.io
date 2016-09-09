@@ -71,6 +71,30 @@
     }
 }
 
+.bring-to-front{
+    position: relative;
+    z-index: 10;
+}
+
+.overlay{
+    @include transition;
+    
+    visibility: hidden;
+    opacity: 0;
+    
+    position: fixed;
+    width: calc(100% - 80px);
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    margin-left: 80px;
+    
+    &.visible{
+        visibility: visible;
+        opacity: 1;
+        z-index: 2;
+    }
+}
+
 .list{
     li{
         margin-bottom: 30px;
