@@ -5,9 +5,8 @@ aside{
     background-color: #fff;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
     
-    @include respond-to('large'){
+    @include respond-to('small'){
         display: none;
-        //width: 280px;
     }
     
     .bg-aside{
@@ -21,20 +20,9 @@ aside{
     }
     
     nav{
-        /*.profile-picture{
-            margin: 10% 0 10% 0;
-            
-            img{
-                display: block;
-                max-width: 100%;
-                height: auto;
-                margin: 0 auto;
-            }
-        }*/
-        
         >ul{
             >li{
-                margin: 20px 0;
+                margin: 40px 0;
                 position: relative;
                 
                 &:hover{
