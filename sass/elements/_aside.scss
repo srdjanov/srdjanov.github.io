@@ -2,11 +2,21 @@ aside{
     @include set-display(null, 16%, 100%);
     position: fixed;
     
-    background-color: $color-module;
+    background-color: #fff;
     
     @include respond-to('large'){
         display: none;
         width: 280px;
+    }
+    
+    .bg-aside{
+        background: url("../img/img-bg-01.png") no-repeat center;
+        background-size: contain;
+        height: 100px;
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        right: 10px;
     }
     
     nav{
@@ -34,7 +44,7 @@ aside{
                     padding: 15px 20px 15px 35px;
                     text-transform: uppercase;
                     letter-spacing: 1px;
-                    color: #fff;
+                    color: $color-module;
                     font-size: 16px;
                     
                     &:before{
@@ -46,7 +56,7 @@ aside{
                         
                         width: 10px;
                         height: 10px;
-                        border: 2px solid #fff;
+                        border: 2px solid $color-module;
                         border-radius: 50%;
                         
                     }
@@ -58,9 +68,11 @@ aside{
                     }
                     
                     &:hover{
-                        background-color: $color-module-hover;
+                        background-color: $color-module-light;
+                        color: #fff;
                         
                         &:before{
+                            border-color: #fff;
                             background-color: #fff;
                         }
                     }

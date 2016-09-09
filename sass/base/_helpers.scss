@@ -101,6 +101,14 @@
     display: block;
 }
 
+.full-width{
+    width: 100%;
+}
+
+.half-width{
+    width: 50%;
+}
+
 // sass map containing breakpoints
 $breakpoints: (
     'xsmall' : 479px,
