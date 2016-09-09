@@ -30,6 +30,19 @@
     height: $height;
 }
 
+/* tooltips' border color of tail mixin */
+@mixin tail-color(
+    $top: transparent,
+    $right: transparent,
+    $bottom: transparent,
+    $left: transparent){
+        
+        border-top-color: $top;
+        border-right-color: $right;
+        border-bottom-color: $bottom;
+        border-left-color: $left;
+}
+
 .relative{
     position: relative;
 }

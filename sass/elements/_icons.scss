@@ -1,4 +1,28 @@
 /* home page badge icons */
+
+/* global */
+i,a{
+    &.icon-skills{
+        background: url('../img/skills.svg') no-repeat center;
+    }
+
+    &.icon-experience{
+        background: url('../img/experience.svg') no-repeat center;
+    }
+
+    &.icon-education{
+        background: url('../img/education.svg') no-repeat center;
+    }
+
+    &.icon-contact{
+        background: url('../img/contact.svg') no-repeat center;
+    }
+
+    &.icon-user{
+        background: url('../img/user.svg') no-repeat center;
+    }
+}
+
 .content{
     h1{
         position: relative;
@@ -10,25 +34,18 @@
             width: 30px;
             height: 30px;
             top: 3px;
-            
-            &.icon-skills{
-                background: url('../img/skills.svg') no-repeat center;
-            }
-            
-            &.icon-experience{
-                background: url('../img/experience.svg') no-repeat center;
-            }
-            
-            &.icon-education{
-                background: url('../img/education.svg') no-repeat center;
-            }
-            
-            &.icon-contact{
-                background: url('../img/contact.svg') no-repeat center;
-            }
-            
-            &.icon-user{
-                background: url('../img/user.svg') no-repeat center;
+        }
+    }
+}
+
+.menu{
+    >ul{
+        >li{
+            a{
+                display: block;
+                width: 60px;
+                height: 60px;
+                margin: 0 auto;
             }
         }
     }

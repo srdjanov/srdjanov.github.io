@@ -1,7 +1,7 @@
 .content{
-    @include set-display(null, calc(100% - 16%), null);
+    @include set-display(null, calc(100% - 80px), null);
     min-height: 100%;
-    margin-left: 16%;
+    margin-left: 80px;
     padding: 30px;
     background-color: $color-module-light;
     
@@ -15,7 +15,7 @@
     }
     
     >section{
-        margin: 5% 10%;
+        margin: 5% 15%;
         
         @include respond-to('small'){
             margin: 5% 10px;
@@ -33,7 +33,7 @@
             
             border-left: 4px solid $color-module-hover;
             background-color: #fff;
-            box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
             border-radius: 0px;
             
             div{
