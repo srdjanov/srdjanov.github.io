@@ -24,3 +24,14 @@
         }
     }
 }
+
+#skills{
+    article{
+        >div{
+            @include respond-to('xsmall'){
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
