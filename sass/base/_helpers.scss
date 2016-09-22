@@ -126,6 +126,10 @@
     width: 50%;
 }
 
+.half-and-quarter-width{
+    width: 75%;
+}
+
 // sass map containing breakpoints
 $breakpoints: (
     'xsmall' : 479px,
