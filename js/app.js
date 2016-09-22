@@ -37,3 +37,9 @@ function toggleSkill(targetId, element) {
         }
     });
 }
+
+function scrollToSection(target) {
+    $('html, body').animate({
+        scrollTop: $("#" + target).offset().top
+    }, 500);
+}

@@ -1,3 +1,15 @@
+/* social icons base class */
+.social{
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    
+    @include respond-to('medium'){
+        width: 60px;
+        height: 60px;
+    }
+}
+
 /* home page badge icons */
 
 /* global */
@@ -20,6 +32,22 @@ i,a{
 
     &.icon-user{
         background: url('../img/user.svg') no-repeat center;
+    }
+    
+    &.icon-skype{
+        background: url('../img/icons/skype.svg') no-repeat center;
+    }
+    
+    &.icon-facebook{
+        background: url('../img/icons/facebook.svg') no-repeat center;
+    }
+    
+    &.icon-email{
+        background: url('../img/icons/email.svg') no-repeat center;
+    }
+    
+    &.icon-linkedin{
+        background: url('../img/icons/linkedin.svg') no-repeat center;
     }
 }
 

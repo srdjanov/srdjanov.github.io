@@ -7,9 +7,6 @@
     
     @include respond-to('small'){
         padding: 10px;
-    }
-    
-    @include respond-to('small'){
         width: 100%;
         margin-left: 0;
     }
@@ -18,7 +15,7 @@
         margin: 5% 15%;
         
         @include respond-to('small'){
-            margin: 5% 10px;
+            margin: 5% 0;
         }
         
         >article{
@@ -41,6 +38,10 @@
                 display: table-cell;
                 vertical-align: top;
                 overflow: hidden;
+                
+                &.overflow-visible{
+                    overflow: visible;
+                }
                 
                 &.description{
                     background-color: $color-module-hover;
@@ -65,6 +66,10 @@
                             }
                         }
                     }
+                }
+                
+                @include respond-to('small'){
+                    padding: 10px;
                 }
             }
         }
@@ -133,6 +138,64 @@
         
         label{
             @include set-font(16px, 300, $color-font-heading);
+        }
+    }
+}
+
+#contact{
+    article div >ul >li{
+        margin-bottom: 20px;
+        
+        a{
+            margin-right: 40px;
+            
+            @include respond-to('small'){
+                display: block;
+                margin: 20px auto !important;
+            }
+            
+            &:last-of-type{
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.tooltip-parent{
+    position: relative;
+    z-index: 10;
+    
+    &:hover{
+        .tooltip{
+            visibility: visible;
+            opacity: 1;
+            top: -50px;
+        }
+    }
+    
+    .tooltip{
+        @include horizontal-align(absolute);
+        @include transition;
+        
+        
+        visibility: hidden;
+        opacity: 0;
+        top: -30px;
+        will-change: top, visibility, opacity;
+        
+        color: #fff;
+        background-color: $color-module;
+        border-radius: 8px;
+        padding: 10px;
+        
+        &:before{
+            content: '';
+            @include tail-color($color-module, transparent, transparent, transparent);
+            @include horizontal-align(absolute);
+            
+            bottom: -20px;
+            border-width: 10px;
+            border-style: solid;
         }
     }
 }
