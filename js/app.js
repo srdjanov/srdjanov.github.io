@@ -28,22 +28,26 @@ app.controller('MainController', ['$scope', '$location', function ($scope, $loca
 app.controller('PortfolioController', ['$scope', function($scope){
     $scope.filter = [];
     
-    /*$scope.addFilterItem = function($filterItem){
-        var self = $(this).text();
-        console.log($scope.self);
-        
-        $scope.filter.push(self);
-        
-        console.log($scope.filter);
-    };*/
-    
     $('.tag').click(function ($this){
-        var self = $(this).text();
-        console.log(self);
-        $scope.filter.push(self);
+        var tagText = $(this).text();
         
-        console.log($scope.filter);
-    })
+        if($scope.filter.includes(tagText)){
+            return;
+        }else{
+            $scope.filter.push(tagText);
+            
+            $('.portfolio-box-item').hide();
+            
+            $('.tag').each( function(){
+                if($(this).text() === tagText){
+                    $(this).parent().show();
+                }
+            });
+            
+            var $filterListItem = $("<li><span class='tag-filter'>" + tagText + "</span></li>")
+            $("#filterList").append($filterListItem);
+        }
+    });
     
 }]);
 
