@@ -1,6 +1,13 @@
 .portfolio-wrapper{
     min-height: 100%;
-    background-color: #f9f9f9;
+    background: 
+        linear-gradient(
+          rgba(242, 242, 242, 0.95), 
+          rgba(242, 242, 242, 0.95)
+        ),
+        url('../img/img-background-portfolio.jpg') center;
+    
+    background-size: contain;
     
     .portfolio-box-wrapper{
         @extend .clearfix;

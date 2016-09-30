@@ -25,6 +25,28 @@ app.controller('MainController', ['$scope', '$location', function ($scope, $loca
     }
 }]);
 
+app.controller('PortfolioController', ['$scope', function($scope){
+    $scope.filter = [];
+    
+    /*$scope.addFilterItem = function($filterItem){
+        var self = $(this).text();
+        console.log($scope.self);
+        
+        $scope.filter.push(self);
+        
+        console.log($scope.filter);
+    };*/
+    
+    $('.tag').click(function ($this){
+        var self = $(this).text();
+        console.log(self);
+        $scope.filter.push(self);
+        
+        console.log($scope.filter);
+    })
+    
+}]);
+
 app.run(['$location', '$rootScope', function($location, $rootScope) {
     $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
         if (current.hasOwnProperty('$$route')) {
@@ -50,4 +72,8 @@ function scrollToSection(target) {
     $('html, body').animate({
         scrollTop: $("#" + target).offset().top
     }, 500);
-}
+};
+
+
+
+
