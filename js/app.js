@@ -9,6 +9,14 @@ var app = angular.module("app",  ['ngRoute'])
         templateUrl: '/pages/cv.html',
         title: 'CV'
     })
+    .when('/portfolio', {
+        templateUrl: '/pages/portfolio/portfolio.html',
+        title: 'CV'
+    })
+    .when('/portfolio/animated-icons', {
+        templateUrl: '/pages/portfolio/animated-icons.html',
+        title: 'Portfolio'
+    })
 });
 
 app.controller('MainController', ['$scope', '$location', function ($scope, $location){

@@ -1,9 +1,9 @@
 // Transition mixin
-@mixin transition($time: null, $effect: null){
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+@mixin transition($time: 0.2s, $effect: ease){
+    -webkit-transition: all $time $effect;
+    -moz-transition: all $time $effect;
+    -o-transition: all $time $effect;
+    transition: all $time $effect;
 }
 
 //Vertical align mixin
@@ -157,6 +157,22 @@ $breakpoints: (
     }
 }
 
+.container-fluid{
+    padding: 0 $gutter;
+    
+    @include respond-to('medium'){
+        padding: 0 $gutter / 2;
+    }
+    
+    @include respond-to('small'){
+        padding: 0 15px;
+    }
+}
+
+.page-content{
+    padding: 40px 0;
+}
+
 /* animations */
 
 .animated{
@@ -281,4 +297,35 @@ $breakpoints: (
 .shake{
     -webkit-animation-name: shake;
     animation-name: shake;
+}
+
+@-webkit-keyframes slide-in-up{
+    from{
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+        visibility: visible;
+    }
+
+    to{
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slide-in-up{
+    from{
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+        visibility: visible;
+    }
+
+    to{
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.slide-in-up{
+    -webkit-animation-name: slide-in-up;
+    animation-name: slide-in-up;
 }

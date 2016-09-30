@@ -1,7 +1,8 @@
 @import 'compass/reset';
 
-@import 'base/helpers',
+@import 
         'base/variables',
+        'base/helpers',
         'base/typo',
         'base/base';
 
@@ -10,6 +11,8 @@
         'elements/icons';
 
 @import 'layout/pages/welcome',
-        'layout/pages/home';
+        'layout/pages/home',
+        'layout/pages/portfolio/portfolio',
+        'layout/pages/portfolio/01-animated-icons';
 
 @import 'layout/sections/skills';
