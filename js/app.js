@@ -11,11 +11,11 @@ var app = angular.module("app",  ['ngRoute'])
     })
     .when('/portfolio', {
         templateUrl: '/pages/portfolio/portfolio.html',
-        title: 'CV'
+        title: 'Portfolio'
     })
     .when('/portfolio/animated-icons', {
         templateUrl: '/pages/portfolio/animated-icons.html',
-        title: 'Portfolio'
+        title: 'Animated icons'
     })
 });
 
