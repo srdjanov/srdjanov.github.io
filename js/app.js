@@ -25,30 +25,11 @@ app.controller('MainController', ['$scope', '$location', function ($scope, $loca
     }
 }]);
 
-app.controller('PortfolioController', ['$scope', function($scope){
-    $scope.filter = [];
-    
-    $('.tag').click(function ($this){
-        var tagText = $(this).text();
-        
-        if($scope.filter.includes(tagText)){
-            return;
-        }else{
-            $scope.filter.push(tagText);
-            
-            $('.portfolio-box-item').hide();
-            
-            $('.tag').each( function(){
-                if($(this).text() === tagText){
-                    $(this).parent().show();
-                }
-            });
-            
-            var $filterListItem = $("<li><span class='tag-filter'>" + tagText + "</span></li>")
-            $("#filterList").append($filterListItem);
-        }
+app.controller('PortfolioController', ['$scope', '$http', function($scope, $http){
+    $http.get('/data/portfolio.json')
+       .then(function(res){
+          $scope.portfolioList = res.data;
     });
-    
 }]);
 
 app.run(['$location', '$rootScope', function($location, $rootScope) {

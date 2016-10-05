@@ -7,7 +7,7 @@
     font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 }
 
-// set font family fn
+// set font settings fn
 @mixin set-font($size: null,
                 $weight: null,
                 $color: null){
