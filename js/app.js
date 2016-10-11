@@ -30,6 +30,8 @@ app.controller('PortfolioController', ['$scope', '$http', function($scope, $http
        .then(function(res){
           $scope.portfolioList = res.data;
     });
+    
+    $scope.chosenCategory = "";
 }]);
 
 app.run(['$location', '$rootScope', function($location, $rootScope) {

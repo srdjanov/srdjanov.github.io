@@ -2,19 +2,20 @@
     <div class="page-content">
         <h1>Portfolio ..coming soon!</h1>
         
-        <p>Search by tag</p>
-        <input type="text" ng-model="searchText.tags.name">
+        <p>Search by</p>
+        
+        <input type="text" ng-model="searchText"> <!-- tags.name -->
         
         <ul class="portfolio-box-wrapper">
-            <li class="portfolio-box-item" ng-repeat="portfolio in portfolioList | filter:searchText"> <!--  ng-click='nav("/portfolio/animated-icons")' -->
+            <li class="portfolio-box-item" 
+                ng-repeat="portfolio in portfolioList | filter:searchText :chosenCategory"
+                ng-click='nav("/portfolio/animated-icons")'>
                 <h3>{{ portfolio.name }}</h3>
                 <p>{{ portfolio.category }}</p>
                 <label>{{ portfolio.description }}</label>
                 
                 <ul class="portfolio-tags">
-                    <li ng-repeat="tag in portfolio.tags">
-                        #{{ tag.name }}
-                    </li>
+                    <li ng-repeat="tag in portfolio.tags">#{{ tag.name }}</li>
                 </ul>
             </li>
             
