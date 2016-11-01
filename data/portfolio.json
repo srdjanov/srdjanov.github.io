@@ -6,7 +6,8 @@
     "tags": [
       { "name": "HTML" },
       { "name": "JS" }
-    ]
+    ],
+    "disabled": false
   },
   {
     "name": "Shapes",
@@ -14,7 +15,8 @@
     "category": "Playground",
     "tags": [
       { "name": "CSS" }
-    ]
+    ],
+    "disabled": true
   },
   {
     "name": "Usefull mixins",
@@ -23,32 +25,7 @@
     "tags": [
       { "name": "Animation" },
       { "name": "CSS" }
-    ]
-  },
-  {
-    "name": "Animated icons",
-    "description": "Tart apple pie dragée oat cake ice cream pie marzipan cake.",
-    "category": "Playground",
-    "tags": [
-      { "name": "HTML" },
-      { "name": "JS" }
-    ]
-  },
-  {
-    "name": "Shapes",
-    "description": "Pie pie cookie pie lemon drops. Cheesecake chocolate jujubes macaroon. Candy canes jelly beans sweet roll croissant",
-    "category": "Playground",
-    "tags": [
-      { "name": "CSS" }
-    ]
-  },
-  {
-    "name": "Usefull mixins",
-    "description": "Pudding tart apple pie soufflé candy canes marzipan brownie croissant pastry. Danish danish biscuit pudding marshmallow jelly beans. Fruitcake brownie jujubes wafer danish.",
-    "category": "Tips & tricks",
-    "tags": [
-      { "name": "Animation" },
-      { "name": "CSS" }
-    ]
+    ],
+    "disabled": true
   }
 ]

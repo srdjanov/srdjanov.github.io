@@ -2,14 +2,15 @@
     <div class="page-content">
         <h1>Portfolio ..coming soon!</h1>
         
-        <p>Search by</p>
+        <p>Search by anything</p>
         
         <input type="text" ng-model="searchText"> <!-- tags.name -->
         
         <ul class="portfolio-box-wrapper">
             <li class="portfolio-box-item" 
                 ng-repeat="portfolio in portfolioList | filter:searchText :chosenCategory"
-                ng-click='nav("/portfolio/animated-icons")'>
+                ng-click='nav("/portfolio/animated-icons")'
+                ng-class="{ 'disabled': portfolio.disabled }">
                 <h3>{{ portfolio.name }}</h3>
                 <p>{{ portfolio.category }}</p>
                 <label>{{ portfolio.description }}</label>

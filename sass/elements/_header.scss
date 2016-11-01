@@ -1,0 +1,42 @@
+.navbar-small{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 20px;
+    padding-top: 20px;
+    
+    a{
+        @include transition;
+        
+        display: block;
+        cursor: pointer;
+        color: #fff;
+        
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        
+        &:before{
+            font-weight: bold !important;
+            font-size: 20px;
+            line-height: 35px;
+        }
+
+        &:hover{
+            background-color: #fff;
+            color: $color-module;
+        }
+    }
+    
+    span{
+        margin-right: 5px;
+        
+        &:before{
+            font-weight: bold !important;
+            font-size: 20px;
+        }
+    }
+}

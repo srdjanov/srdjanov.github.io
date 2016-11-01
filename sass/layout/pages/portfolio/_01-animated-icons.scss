@@ -20,31 +20,43 @@ $icon-link-width: 60px;
 }
 
 .icons-wrapper{
-    width: 50%;
+    //width: 50%;
+    padding: 40px 0;
     margin: 0 auto;
 }
 
 .animated-icons-holder{
     background-color: $color-module-hover;
+    min-height: 100%;
+    padding: 10% 0;
     
-    margin-bottom: 160px;
     
     h2{
         text-align: center;
+        color: #fff;
     }
     
     section{
         &.disabled-box{
             opacity: 0.1;
+            
             a{
                 cursor: none;
                 pointer-events: none;
             }
         }
         
+        &:last-of-type{
+            article{
+                &:last-of-type{
+                    padding-bottom: 0px;
+                }
+            }
+        }
+        
         
         article{
-            padding: 40px 0;
+            padding-bottom: 40px;
             text-align: center;
             
             a{
