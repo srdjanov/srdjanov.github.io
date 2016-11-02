@@ -252,3 +252,25 @@
         }
     }
 }
+
+.contact-form{
+    
+    .contact-step{
+        display: block;
+        @extend .clearfix;
+        
+        >div{
+            width: 75%;
+        }
+        
+        &-left{
+            float: left;
+            clear: right;
+        }
+        
+        &-right{
+            float: right;
+            clear: left;
+        }
+    }
+}

@@ -53,6 +53,16 @@ i,a{
     &.icon-linkedin{
         background: url('../img/icons/linkedin.svg') no-repeat center;
     }
+    
+    &.icon-boy{
+        background: url('../img/icon-boy.svg') no-repeat center;
+    }
+}
+
+.icon-boy{
+    width: 40px;
+    height: 40px;
+    display: block;
 }
 
 .content{
