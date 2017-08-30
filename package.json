@@ -1,7 +1,7 @@
 {
-  "name": "srdjanov.github.io",
+  "name": "srdjanov-portfolio",
   "version": "1.0.0",
-  "description": "Readme.",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/srdjanov/srdjanov.github.io.git"
   },
-  "author": "Konstantin Srdjanov",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/srdjanov/srdjanov.github.io/issues"
   },
